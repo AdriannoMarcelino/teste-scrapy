@@ -36,7 +36,7 @@ Você pode consultar um ou mais processos. Para múltiplos, separe os números p
 scrapy crawl trf5 -a processo=0015648-78.1999.4.05.0000
 
 # Múltiplos processos
-scrapy crawl trf5 -a processo=0015648-78.1999.4.05.0000,0012656-90.2012.4.05.0000.
+scrapy crawl trf5 -a processo=0015648-78.1999.4.05.0000,0012656-90.2012.4.05.0000
 ```
 
 ### 3. Rodando com CNPJ
@@ -46,6 +46,7 @@ scrapy crawl trf5 -a cnpj=00000000000191
 ```
 
 > O CNPJ pode ser informado com ou sem pontuação.
+> A consulta percorre automaticamente todas as páginas de resultados.
 
 ------------------------------------------------------------------------
 
@@ -61,8 +62,7 @@ scrapy crawl trf5 -a cnpj=00000000000191
     -   Relator
     -   Envolvidos
     -   Movimentações
--   Consulta via CNPJ reproduz a requisição original do formulário
-    (GET + POST).
+-   Consulta via CNPJ acessa diretamente o endpoint público de listagem de processos por CNPJ, com suporte a paginação.
 
 ------------------------------------------------------------------------
 
